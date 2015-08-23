@@ -28,8 +28,8 @@ A tidy data set tidy_data.txt
 4. Name the columns in the test and train measurement data sets using data from the measurement names data set.
 5. Grep columns in the measurements data sets from step 4 which contain means or standard deviations (column name has either "mean()" or "std()"). Subset the data sets based on the column numbers obtained in this grep.
 6. Column bind data sets from steps 3 and 5.
-7. Row bind test and train data sets from step 7 to create one data set.
-8. Summarize the dataset by SubjectID and ActivityName.
+7. Row bind test and train data sets from step 6 to create one data set.
+8. Summarize the data set by SubjectID and ActivityName.
 9. Rename parts of the column names of the summarized data set to make it more readable:
   - "fBodyBody" and "fBody" to "freqBody"
   - "tBody" to "timeBody"
