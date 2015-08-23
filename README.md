@@ -6,15 +6,15 @@ Extracts mean and standard deviation measurements, and tidies data from testing 
 
 ###Required R packages
 
-..-dplyr - for summarizing data (summarise_each) and command piping (%>%)
-..-stringr - for renaming column names (str_replace_all)
+- dplyr - for summarizing data (summarise_each) and command piping (%>%)
+- stringr - for renaming column names (str_replace_all)
 
 ###Data files needed (download [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and extract files):
-..- activity_labels.txt - contains physical activity names
-..- features.txt - contains measurement names
-..- test/subject_test.txt and train/subject_train.txt - contain the ID numbers of the subjects in the experiment
-..- test/y_test.txt and test/y_test.txt - contain the numeric codes of the physical activities done by the subjects
-..- test/X_test.txt and /train/X_train.txt - contain the numeric test measurements
+- activity_labels.txt - contains physical activity names
+- features.txt - contains measurement names
+- test/subject_test.txt and train/subject_train.txt - contain the ID numbers of the subjects in the experiment
+- test/y_test.txt and test/y_test.txt - contain the numeric codes of the physical activities done by the subjects
+- test/X_test.txt and /train/X_train.txt - contain the numeric test measurements
 
 ###Script steps: (steps 2-7 must be done for both test and train data frames)
 
@@ -27,15 +27,15 @@ Extracts mean and standard deviation measurements, and tidies data from testing 
 8. Row bind test and train datasets from step 7 to create one data set.
 9. Summarize the dataset by SubjectID and ActivityName.
 10. Rename parts of the column names of the summarized dataset to make it more readable:
-..-"fBodyBody" and "fBody" to "freqBody")
-..-"tBody" to "timeBody"
-..-"tGravity" to "timeGravity"
-..-"Acc" to "Accelorometer"
-..-"Gyro" to "Gyroscope"
-..-"Mag" to "Magnitude"
-..-"-mean()" to "Mean"
-..-"-std()" to "StdDeviation"
-..-"-X" to "XAxis"
-..-"-Y" to "YAxis"
-..-"-Z" to "ZAxis"
+..- "fBodyBody" and "fBody" to "freqBody")
+..- "tBody" to "timeBody"
+..- "tGravity" to "timeGravity"
+..- "Acc" to "Accelorometer"
+..- "Gyro" to "Gyroscope"
+..- "Mag" to "Magnitude"
+..- "-mean()" to "Mean"
+..- "-std()" to "StdDeviation"
+..- "-X" to "XAxis"
+..- "-Y" to "YAxis"
+..- "-Z" to "ZAxis"
 11. Write tidy data set to tidy_data.txt with row.name = FALSE.
