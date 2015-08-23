@@ -42,7 +42,7 @@ run_analysis<-function()
     colnames(trainMeas) <- measLabels[,2]
     #after this, don't use measurementLabels anymore
     
-    # subset measurements with 
+    # subset measurement columns with means or standard deviations
     colsToSubset<-grep("mean\\(\\)|std\\(\\)", measLabels[,2])
     testMeas <- testMeas[,colsToSubset]
     trainMeas <- trainMeas[,colsToSubset]
@@ -60,6 +60,7 @@ run_analysis<-function()
     names <- str_replace_all(names, "fBodyBody", "fBody")
     names <- str_replace_all(names, "fBody", "freqBody")
     names <- str_replace_all(names, "tBody", "timeBody")
+    names <- str_replace_all(names, "tGravity", "timeGravity")
     names <- str_replace_all(names, "Acc", "Accelorometer")
     names <- str_replace_all(names, "Gyro", "Gyroscope")
     names <- str_replace_all(names, "-mean\\(\\)", "Mean")
@@ -70,6 +71,7 @@ run_analysis<-function()
     names <- str_replace_all(names, "Mag", "Magnitude")
     colnames(summary)<-names
     
+    write.table(summary, file="tidy_data.txt", row.name = FALSE)
     summary
 }
 
