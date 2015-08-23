@@ -31,7 +31,7 @@ A tidy data set tidy_data.txt
 8. Row bind test and train data sets from step 7 to create one data set.
 9. Summarize the dataset by SubjectID and ActivityName.
 10. Rename parts of the column names of the summarized data set to make it more readable:
-  - "fBodyBody" and "fBody" to "freqBody")
+  - "fBodyBody" and "fBody" to "freqBody"
   - "tBody" to "timeBody"
   - "tGravity" to "timeGravity"
   - "Acc" to "Accelorometer"
