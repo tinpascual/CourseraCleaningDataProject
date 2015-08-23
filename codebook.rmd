@@ -1,18 +1,20 @@
-## Project Description
-Mean and standard deviation measurements from testing and training data from the Human Activity Recognition Using Smartphones Data Set](https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) were extracted. This data was then tidied.
+##Data Cleaning Project Codebook
 
-##[Data cleaning steps](README.md)
+### Project Description
+Mean and standard deviation measurements from testing and training data from the [Human Activity Recognition Using Smartphones Data Set](https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) were extracted. This data was then tidied.
 
-##Output: tiny_data.txt file
-This file contains a summary of means and standard deviations of measurements per activity per subject ID. There are six (6) activities and 30 subjects, so there is a total of 180 rows in the file. There is one column each for the subject ID and activity, and 66 columns for the different kinds of measurements.
+###[Data cleaning steps](README.md)
 
-###SubjectID
+###Output: tiny_data.txt file
+This file contains a summary of means and standard deviations of measurements per activity per subject ID. There are six (6) activities and 30 subjects, so there is a total of 180 rows in the file. There is one column each for the subject ID and activity, and one column each for the 66 different kinds of measurements.
+
+####SubjectID
 This is the ID of the subject in the experiment. Unique per subject. Integer type with values from 1-30.
 
-###ActivityName
+####ActivityName
 This is the descriptive name of the activity that the subject was doing. Character type and has one of the following values: "LAYING", "SITTING", "STANDING", "WALKING", "WALKING_DOWNSTAIRS", and "WALKING_UPSTAIRS"
 
-###Measurement columns
+####Measurement columns
 Numeric type, normalized and bounded within [-1,1].
 No unit of measurement.
 
@@ -20,80 +22,134 @@ Column name structure:
 
 - Domain signal type: time/frequency
     - "time"/"freq"
+    - presence: all columns
 - Sensor acceleration signal component: body acceleration/gravity
     - "Body"/"Gravity"
+    - presence: all columns
 - Signal measurement device: accelorometer/gyroscope
     - "Accelorometer"/"Gyroscope"
+    - presence: all columns
+- Magnitude of three-dimensional signals
+    - "Magnitude"
+    - presence:
+        - timeBodyAccelorometerMagnitudeMean
+        - timeBodyAccelorometerMagnitudeStdDeviation
+        - timeGravityAccelorometerMagnitudeMean
+        - timeGravityAccelorometerMagnitudeStdDeviation
+        - timeBodyAccelorometerJerkMagnitudeMean
+        - timeBodyAccelorometerJerkMagnitudeStdDeviation
+        - timeBodyGyroscopeMagnitudeMean
+        - timeBodyGyroscopeMagnitudeStdDeviation
+        - timeBodyGyroscopeJerkMagnitudeMean
+        - timeBodyGyroscopeJerkMagnitudeStdDeviation
+        - freqBodyAccelorometerMagnitudeMean
+        - freqBodyAccelorometerMagnitudeStdDeviation
+        - freqBodyAccelorometerJerkMagnitudeMean
+        - freqBodyAccelorometerJerkMagnitudeStdDeviation
+        - freqBodyGyroscopeMagnitudeMean
+        - freqBodyGyroscopeMagnitudeStdDeviation
+        - freqBodyGyroscopeJerkMagnitudeMean
+        - freqBodyGyroscopeJerkMagnitudeStdDeviation
+- Body linear velocity and and angular velocity as derived in time
+    -"Jerk"
+    - presence:
+        - timeBodyAccelorometerJerkMeanXAxis
+        - timeBodyAccelorometerJerkMeanYAxis
+        - timeBodyAccelorometerJerkMeanZAxis
+        - timeBodyAccelorometerJerkStdDeviationXAxis
+        - timeBodyAccelorometerJerkStdDeviationYAxis
+        - timeBodyAccelorometerJerkStdDeviationZAxis
+        - timeBodyGyroscopeJerkMeanXAxis
+        - timeBodyGyroscopeJerkMeanYAxis
+        - timeBodyGyroscopeJerkMeanZAxis
+        - timeBodyGyroscopeJerkStdDeviationXAxis
+        - timeBodyGyroscopeJerkStdDeviationYAxis
+        - timeBodyGyroscopeJerkStdDeviationZAxis
+        - timeBodyAccelorometerJerkMagnitudeMean
+        - timeBodyAccelorometerJerkMagnitudeStdDeviation
+        - timeBodyGyroscopeJerkMagnitudeMean
+        - timeBodyGyroscopeJerkMagnitudeStdDeviation
+        - freqBodyAccelorometerJerkMeanXAxis
+        - freqBodyAccelorometerJerkMeanYAxis
+        - freqBodyAccelorometerJerkMeanZAxis
+        - freqBodyAccelorometerJerkStdDeviationXAxis
+        - freqBodyAccelorometerJerkStdDeviationYAxis
+        - freqBodyAccelorometerJerkStdDeviationZAxis
+        - freqBodyAccelorometerJerkMagnitudeMean
+        - freqBodyAccelorometerJerkMagnitudeStdDeviation
+        - freqBodyGyroscopeJerkMagnitudeMean
+        - freqBodyGyroscopeJerkMagnitudeStdDeviation
 - Statistic used: mean/standard deviation
     - "Mean/StdDeviation"
+    - presence: all columns
 - Axial signal direction: X/Y/Z
     - "XAxis"/"YAxis"/"ZAxis"
+    - presence: for all columns except for those with Magnitude
 
-timeBodyAccelorometerMeanXAxis
-timeBodyAccelorometerMeanYAxis
-timeBodyAccelorometerMeanZAxis
-timeBodyAccelorometerStdDeviationXAxis
-timeBodyAccelorometerStdDeviationYAxis
-timeBodyAccelorometerStdDeviationZAxis
-timeGravityAccelorometerMeanXAxis
-timeGravityAccelorometerMeanYAxis
-timeGravityAccelorometerMeanZAxis
-timeGravityAccelorometerStdDeviationXAxis
-timeGravityAccelorometerStdDeviationYAxis
-timeGravityAccelorometerStdDeviationZAxis
-timeBodyAccelorometerJerkMeanXAxis
-timeBodyAccelorometerJerkMeanYAxis
-timeBodyAccelorometerJerkMeanZAxis
-timeBodyAccelorometerJerkStdDeviationXAxis
-timeBodyAccelorometerJerkStdDeviationYAxis
-timeBodyAccelorometerJerkStdDeviationZAxis
-timeBodyGyroscopeMeanXAxis
-timeBodyGyroscopeMeanYAxis
-timeBodyGyroscopeMeanZAxis
-timeBodyGyroscopeStdDeviationXAxis
-timeBodyGyroscopeStdDeviationYAxis
-timeBodyGyroscopeStdDeviationZAxis
-timeBodyGyroscopeJerkMeanXAxis
-timeBodyGyroscopeJerkMeanYAxis
-timeBodyGyroscopeJerkMeanZAxis
-timeBodyGyroscopeJerkStdDeviationXAxis
-timeBodyGyroscopeJerkStdDeviationYAxis
-timeBodyGyroscopeJerkStdDeviationZAxis
-timeBodyAccelorometerMagnitudeMean
-timeBodyAccelorometerMagnitudeStdDeviation
-tGravityAccelorometerMagnitudeMean
-tGravityAccelorometerMagnitudeStdDeviation
-timeBodyAccelorometerJerkMagnitudeMean
-timeBodyAccelorometerJerkMagnitudeStdDeviation
-timeBodyGyroscopeMagnitudeMean
-timeBodyGyroscopeMagnitudeStdDeviation
-timeBodyGyroscopeJerkMagnitudeMean
-timeBodyGyroscopeJerkMagnitudeStdDeviation
-freqBodyAccelorometerMeanXAxis
-freqBodyAccelorometerMeanYAxis
-freqBodyAccelorometerMeanZAxis
-freqBodyAccelorometerStdDeviationXAxis
-freqBodyAccelorometerStdDeviationYAxis
-freqBodyAccelorometerStdDeviationZAxis
-freqBodyAccelorometerJerkMeanXAxis
-freqBodyAccelorometerJerkMeanYAxis
-freqBodyAccelorometerJerkMeanZAxis
-freqBodyAccelorometerJerkStdDeviationXAxis
-freqBodyAccelorometerJerkStdDeviationYAxis
-freqBodyAccelorometerJerkStdDeviationZAxis
-freqBodyGyroscopeMeanXAxis
-freqBodyGyroscopeMeanYAxis
-freqBodyGyroscopeMeanZAxis
-freqBodyGyroscopeStdDeviationXAxis
-freqBodyGyroscopeStdDeviationYAxis
-freqBodyGyroscopeStdDeviationZAxis
-freqBodyAccelorometerMagnitudeMean
-freqBodyAccelorometerMagnitudeStdDeviation
-freqBodyAccelorometerJerkMagnitudeMean
-freqBodyAccelorometerJerkMagnitudeStdDeviation
-freqBodyGyroscopeMagnitudeMean
-freqBodyGyroscopeMagnitudeStdDeviation
-freqBodyGyroscopeJerkMagnitudeMean
-freqBodyGyroscopeJerkMagnitudeStdDeviation"  
-
-##Sources
+List of measurement column names:
+- timeBodyAccelorometerMeanXAxis
+- timeBodyAccelorometerMeanYAxis
+- timeBodyAccelorometerMeanZAxis
+- timeBodyAccelorometerStdDeviationXAxis
+- timeBodyAccelorometerStdDeviationYAxis
+- timeBodyAccelorometerStdDeviationZAxis
+- timeGravityAccelorometerMeanXAxis
+- timeGravityAccelorometerMeanYAxis
+- timeGravityAccelorometerMeanZAxis
+- timeGravityAccelorometerStdDeviationXAxis
+- timeGravityAccelorometerStdDeviationYAxis
+- timeGravityAccelorometerStdDeviationZAxis
+- timeBodyAccelorometerJerkMeanXAxis
+- timeBodyAccelorometerJerkMeanYAxis
+- timeBodyAccelorometerJerkMeanZAxis
+- timeBodyAccelorometerJerkStdDeviationXAxis
+- timeBodyAccelorometerJerkStdDeviationYAxis
+- timeBodyAccelorometerJerkStdDeviationZAxis
+- timeBodyGyroscopeMeanXAxis
+- timeBodyGyroscopeMeanYAxis
+- timeBodyGyroscopeMeanZAxis
+- timeBodyGyroscopeStdDeviationXAxis
+- timeBodyGyroscopeStdDeviationYAxis
+- timeBodyGyroscopeStdDeviationZAxis
+- timeBodyGyroscopeJerkMeanXAxis
+- timeBodyGyroscopeJerkMeanYAxis
+- timeBodyGyroscopeJerkMeanZAxis
+- timeBodyGyroscopeJerkStdDeviationXAxis
+- timeBodyGyroscopeJerkStdDeviationYAxis
+- timeBodyGyroscopeJerkStdDeviationZAxis
+- timeBodyAccelorometerMagnitudeMean
+- timeBodyAccelorometerMagnitudeStdDeviation
+- timeGravityAccelorometerMagnitudeMean
+- timeGravityAccelorometerMagnitudeStdDeviation
+- timeBodyAccelorometerJerkMagnitudeMean
+- timeBodyAccelorometerJerkMagnitudeStdDeviation
+- timeBodyGyroscopeMagnitudeMean
+- timeBodyGyroscopeMagnitudeStdDeviation
+- timeBodyGyroscopeJerkMagnitudeMean
+- timeBodyGyroscopeJerkMagnitudeStdDeviation
+- freqBodyAccelorometerMeanXAxis
+- freqBodyAccelorometerMeanYAxis
+- freqBodyAccelorometerMeanZAxis
+- freqBodyAccelorometerStdDeviationXAxis
+- freqBodyAccelorometerStdDeviationYAxis
+- freqBodyAccelorometerStdDeviationZAxis
+- freqBodyAccelorometerJerkMeanXAxis
+- freqBodyAccelorometerJerkMeanYAxis
+- freqBodyAccelorometerJerkMeanZAxis
+- freqBodyAccelorometerJerkStdDeviationXAxis
+- freqBodyAccelorometerJerkStdDeviationYAxis
+- freqBodyAccelorometerJerkStdDeviationZAxis
+- freqBodyGyroscopeMeanXAxis
+- freqBodyGyroscopeMeanYAxis
+- freqBodyGyroscopeMeanZAxis
+- freqBodyGyroscopeStdDeviationXAxis
+- freqBodyGyroscopeStdDeviationYAxis
+- freqBodyGyroscopeStdDeviationZAxis
+- freqBodyAccelorometerMagnitudeMean
+- freqBodyAccelorometerMagnitudeStdDeviation
+- freqBodyAccelorometerJerkMagnitudeMean
+- freqBodyAccelorometerJerkMagnitudeStdDeviation
+- freqBodyGyroscopeMagnitudeMean
+- freqBodyGyroscopeMagnitudeStdDeviation
+- freqBodyGyroscopeJerkMagnitudeMean
+- freqBodyGyroscopeJerkMagnitudeStdDeviation
