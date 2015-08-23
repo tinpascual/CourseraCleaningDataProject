@@ -57,7 +57,7 @@ run_analysis<-function()
 
     #make column names more readable
     names<-names(summary)
-    names <- str_replace_all(names, "fBodyBody", "fBody")
+    names <- str_replace_all(names, "fBodyBody", "freqBody")
     names <- str_replace_all(names, "fBody", "freqBody")
     names <- str_replace_all(names, "tBody", "timeBody")
     names <- str_replace_all(names, "tGravity", "timeGravity")
