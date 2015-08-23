@@ -1,15 +1,19 @@
 ##Readme for run_analysis.R
 
-###Function
+###Purpose
 
 Extracts mean and standard deviation measurements, and tidies data from testing and training data from the [Human Activity Recognition Using Smartphones Data Set](https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+
+###Output
+
+A tidy data set tidy_data.txt
 
 ###Required R packages
 
 - dplyr - for summarizing data (summarise_each) and command piping (%>%)
 - stringr - for renaming column names (str_replace_all)
 
-###Data files needed (download [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and extract files):
+###Data files needed (download files [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and extract to the same directory as script):
 - activity_labels.txt - contains physical activity names
 - features.txt - contains measurement names
 - test/subject_test.txt and train/subject_train.txt - contain the ID numbers of the subjects in the experiment
