@@ -18,7 +18,7 @@ A tidy data set tidy_data.txt
 - features.txt - contains measurement names
 - test/subject_test.txt and train/subject_train.txt - contain the ID numbers of the subjects in the experiment
 - test/y_test.txt and test/y_test.txt - contain the numeric codes of the physical activities done by the subjects
-- test/X_test.txt and /train/X_train.txt - contain the numeric test measurements
+- test/X_test.txt and /train/X_train.txt - contain the numeric measurements obtained from the physical activities
 
 ###Script steps: (steps 2-7 must be done for both test and train data sets)
 
