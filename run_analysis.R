@@ -63,12 +63,12 @@ run_analysis<-function()
     names <- str_replace_all(names, "tGravity", "timeGravity")
     names <- str_replace_all(names, "Acc", "Accelorometer")
     names <- str_replace_all(names, "Gyro", "Gyroscope")
+    names <- str_replace_all(names, "Mag", "Magnitude")
     names <- str_replace_all(names, "-mean\\(\\)", "Mean")
     names <- str_replace_all(names, "-std\\(\\)", "StdDeviation")
     names <- str_replace_all(names, "-X", "XAxis")
     names <- str_replace_all(names, "-Y", "YAxis")
     names <- str_replace_all(names, "-Z", "ZAxis")
-    names <- str_replace_all(names, "Mag", "Magnitude")
     colnames(summary)<-names
     
     write.table(summary, file="tidy_data.txt", row.name = FALSE)
