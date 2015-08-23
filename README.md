@@ -24,13 +24,13 @@ A tidy data set tidy_data.txt
 
 1. Read files into separate data sets.
 2. Bind the test activities numeric codes with their corresponding descriptive activity names.
-4. Bind subject ID and activity names, and assign column names "SubjectID" and "ActivityName".
-5. Name the columns in the test and train measurement data sets using data from the measurement names data set.
-6. Grep columns in the measurements data sets from step _ which contain means or standard deviations (column name has either "mean()" or "std()"). Subset the data sets based on the column numbers obtained in this grep.
-7. Column bind data sets from steps 4 and 6.
-8. Row bind test and train data sets from step 7 to create one data set.
-9. Summarize the dataset by SubjectID and ActivityName.
-10. Rename parts of the column names of the summarized data set to make it more readable:
+3. Bind subject ID and activity names, and assign column names "SubjectID" and "ActivityName".
+4. Name the columns in the test and train measurement data sets using data from the measurement names data set.
+5. Grep columns in the measurements data sets from step 4 which contain means or standard deviations (column name has either "mean()" or "std()"). Subset the data sets based on the column numbers obtained in this grep.
+6. Column bind data sets from steps 4 and 6.
+7. Row bind test and train data sets from step 7 to create one data set.
+8. Summarize the dataset by SubjectID and ActivityName.
+9. Rename parts of the column names of the summarized data set to make it more readable:
   - "fBodyBody" and "fBody" to "freqBody"
   - "tBody" to "timeBody"
   - "tGravity" to "timeGravity"
@@ -42,4 +42,4 @@ A tidy data set tidy_data.txt
   - "-X" to "XAxis"
   - "-Y" to "YAxis"
   - "-Z" to "ZAxis"
-11. Write tidy data set to tidy_data.txt with row.name = FALSE.
+10. Write tidy data set to tidy_data.txt with row.name = FALSE.
